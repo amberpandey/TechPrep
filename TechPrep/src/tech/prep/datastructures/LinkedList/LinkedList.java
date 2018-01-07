@@ -21,5 +21,43 @@ public class LinkedList {
 			tail=tail.nextNode;
 		}
 	}
+	/**
+	 * 
+	 * @param pos
+	 * @param value
+	 */
+	public void insertatPos(int pos,int value){
+		Node current=head;
+		Node temp = new Node();
+		int count =1;
+		while(count<pos-1){
+			current=current.nextNode;
+			count++;
+		}
+		temp.value=value;
+		temp.nextNode=current.nextNode;
+		current.nextNode=temp;
+	}
+	/**
+	 * 
+	 * @param pos
+	 * @return
+	 */
+	public int getNodeValue(int pos){
+		Node current =head;
+		int count=1;
+		if(pos<0){
+			return 0;
+		}
+		while(count<pos){
+			if(current.nextNode==null){
+				return 0;
+			}
+			current=current.nextNode;
+			count++;
+		}
+		return current.value;
+		
+	}
 
 }
