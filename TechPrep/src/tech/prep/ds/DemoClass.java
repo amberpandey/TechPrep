@@ -13,8 +13,12 @@ public class DemoClass {
 		ll.addAtEnd(3);
 		ll.addAtEnd(6);
 		ll.insertatPos(2, 7);
+		ll.insertAtBegin(36);
+		System.out.println(ll.getNodeValue(1));
 		System.out.println(ll.getNodeValue(2));
 		System.out.println(ll.getNodeValue(3));
+		System.out.println(ll.getNodeValue(4));
+		System.out.println(ll.getNodeValue(5));
 		
 		/**
 		 * 

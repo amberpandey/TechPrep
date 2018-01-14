@@ -18,7 +18,7 @@ public class LinkedList {
 			tail=head;			
 		}else{
 			tail.nextNode=temp;
-			tail=tail.nextNode;
+			tail=temp;
 		}
 	}
 	/**
@@ -37,6 +37,16 @@ public class LinkedList {
 		temp.value=value;
 		temp.nextNode=current.nextNode;
 		current.nextNode=temp;
+	}
+	/**
+	 * 
+	 */
+	public void insertAtBegin(int val){
+		Node temp = new Node();
+		temp.value=val;
+		temp.nextNode=head;
+		head=temp;
+		
 	}
 	/**
 	 * 
