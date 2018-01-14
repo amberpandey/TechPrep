@@ -1,4 +1,4 @@
-package tech.prep.algorithms.recursionBckTrking;
+package tech.prep.algo.recursionBckTrking;
 /**
  * Class Implementing check for sorted Array
  * @author Amber

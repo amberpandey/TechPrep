@@ -1,4 +1,4 @@
-package tech.prep.algorithms.recursionBckTrking;
+package tech.prep.algo.recursionBckTrking;
 
 /**
  * Solution to Tower of Hanoi by recursion

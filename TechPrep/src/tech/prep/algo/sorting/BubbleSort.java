@@ -1,4 +1,4 @@
-package tech.prep.algorithms.sorting;
+package tech.prep.algo.sorting;
 
 public class BubbleSort {
 

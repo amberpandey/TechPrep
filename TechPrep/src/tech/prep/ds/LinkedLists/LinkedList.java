@@ -1,4 +1,4 @@
-package tech.prep.datastructures.LinkedList;
+package tech.prep.ds.LinkedLists;
 
 public class LinkedList {
 	Node head=null;
