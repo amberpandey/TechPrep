@@ -57,6 +57,12 @@ public class DemoClass {
 		System.out.println(dll.size());
 		System.out.println("LL");
 		dll.printLinkedList();
+		dll.deleteFromHead();
+		System.out.println("LL1");
+		dll.printLinkedList();
+		System.out.println("LL2");
+		dll.deleteFromTail();
+		dll.printLinkedList();
 		System.out.println("REVERSE");
 		dll.printReverseLinkedList();
 		// cll.deleteFromBegin();
