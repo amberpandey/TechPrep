@@ -43,6 +43,8 @@ public class DemoClass {
 		cll.deleteFromPos(1);*/
 		
 		DoublyLinkedList dll= new DoublyLinkedList();
+		System.out.println(dll.isEmpty());
+		System.out.println(dll.size());
 		dll.addToTail(1);
 		dll.addToTail(2);
 		dll.addToTail(3);
@@ -51,7 +53,12 @@ public class DemoClass {
 		dll.addToTail(6);
 		dll.addToHead(7);
 		dll.addToHead(8);
+		System.out.println(dll.isEmpty());
+		System.out.println(dll.size());
+		System.out.println("LL");
 		dll.printLinkedList();
+		System.out.println("REVERSE");
+		dll.printReverseLinkedList();
 		// cll.deleteFromBegin();
 		// cll.deleteFromLast();
 		// cll.deleteFromLast();

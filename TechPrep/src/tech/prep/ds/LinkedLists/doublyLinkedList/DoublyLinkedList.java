@@ -4,6 +4,7 @@ import tech.prep.ds.LinkedLists.DNode;
 
 public class DoublyLinkedList {
 	DNode firstNode;
+	DNode lastNode;
 	int size;
 
 	public DoublyLinkedList() {
@@ -14,25 +15,25 @@ public class DoublyLinkedList {
  * @param val
  */
 	public void addToTail(int val) {
+		size++;
 		DNode newNode = new DNode(val);
-		if(firstNode==null){
+		if(isEmpty()){
 			firstNode=newNode;
+			lastNode=firstNode;
 			return;
 		}
-		DNode temp=firstNode;
-		while(temp.nextNode!=null){
-			temp=temp.nextNode;
-		}
-		temp.nextNode=newNode;
-		newNode.prevNode=temp;
+		lastNode.nextNode=newNode;
+		newNode.prevNode=lastNode;
+		lastNode=newNode;;
 	}
 	/**
 	 * 
 	 * @param val
 	 */
 	public void addToHead(int val) {
+		size++;
 		DNode newNode = new DNode(val);
-		if(firstNode==null){
+		if(isEmpty()){
 			firstNode=newNode;
 			return;
 		}
@@ -40,7 +41,9 @@ public class DoublyLinkedList {
 		firstNode.prevNode=newNode;
 		firstNode=newNode;
 	}
-	
+	/**
+	 * 
+	 */
 	public void printLinkedList(){
 		DNode temp=firstNode;
 		while(temp.nextNode!=null){
@@ -48,7 +51,30 @@ public class DoublyLinkedList {
 			temp=temp.nextNode;
 		}
 		System.out.println(temp.value);
-		System.out.println(temp.prevNode.value);
 	}
-	
+/**
+ * 
+ * @return
+ */
+	public int size(){
+		return size;
+	}
+	/**
+	 * 
+	 * @return
+	 */
+	public boolean isEmpty(){
+		return firstNode == null;
+	}
+	/**
+	 * 
+	 */
+	public void printReverseLinkedList(){
+		DNode temp=lastNode;
+		while(temp.prevNode!=null){
+			System.out.println(temp.value);
+			temp=temp.prevNode;
+		}
+		System.out.println(temp.value);
+	}
 }
