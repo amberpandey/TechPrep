@@ -15,8 +15,7 @@ public class CircularLinkedList {
 	 * @param val
 	 */
 	public void addNodeatEnd(int val) {
-		Node temp = new Node();
-		temp.value = val;
+		Node temp = new Node(val);
 		if (firstNode == null) {
 			firstNode = temp;
 			firstNode.nextNode = lastNode;
@@ -34,8 +33,7 @@ public class CircularLinkedList {
 	 * @param val
 	 */
 	public void addatHead(int val) {
-		Node temp = new Node();
-		temp.value = val;
+		Node temp = new Node(val);
 		temp.nextNode = firstNode;
 		firstNode = temp;
 		size++;
@@ -47,8 +45,7 @@ public class CircularLinkedList {
 	 * @param val
 	 */
 	public void addAtPos(int pos, int val) {
-		Node temp = new Node();
-		temp.value = val;
+		Node temp = new Node(val);
 		int count = 0;
 		Node nodeAtPos = firstNode;
 		while (count != pos) {

@@ -10,8 +10,7 @@ public class LinkedList {
 	 * @param value
 	 */
 	public void addAtEnd(int value){
-		Node temp = new Node();
-		temp.value=value;
+		Node temp = new Node(value);
 		if (head ==null){
 			head=temp;
 			head.nextNode=tail;
@@ -28,13 +27,12 @@ public class LinkedList {
 	 */
 	public void insertatPos(int pos,int value){
 		Node current=head;
-		Node temp = new Node();
+		Node temp = new Node(value);
 		int count =1;
 		while(count<pos-1){
 			current=current.nextNode;
 			count++;
 		}
-		temp.value=value;
 		temp.nextNode=current.nextNode;
 		current.nextNode=temp;
 	}
@@ -42,8 +40,7 @@ public class LinkedList {
 	 * 
 	 */
 	public void insertAtBegin(int val){
-		Node temp = new Node();
-		temp.value=val;
+		Node temp = new Node(val);
 		temp.nextNode=head;
 		head=temp;
 		
