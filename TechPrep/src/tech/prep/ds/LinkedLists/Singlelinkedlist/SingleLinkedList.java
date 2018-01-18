@@ -6,7 +6,7 @@ public class SingleLinkedList {
 	Node firstNode;
 	int size;
 	
-	SingleLinkedList(){
+	public SingleLinkedList(){
 		this.size=0;
 	}
 	/**
@@ -14,6 +14,7 @@ public class SingleLinkedList {
 	 * @param val
 	 */
 	public void addAtLast(int val){
+		size++;
 		if(firstNode==null){
 			firstNode=new Node(val);
 			return;
@@ -28,5 +29,70 @@ public class SingleLinkedList {
 		//assign next Node Pointer of last node as new Node;
 		temp.nextNode=newNode;
 	}
+	/**
+	 * 
+	 * @param val
+	 */
+	public void addAtBegin(int val){
+		size++;
+		if(firstNode==null){
+			firstNode=new Node(val);
+			return;
+		}
+		Node temp = new Node(val);
+		temp.nextNode=firstNode;
+		firstNode=temp;
+	}
+	/**
+	 * 
+	 */
+	 public void deleteFromHead(){
+		if(firstNode==null){
+			return;
+		}else{
+			size--;
+			if(firstNode.nextNode!=null){
+				firstNode=firstNode.nextNode;
+				return;
+			}
+			firstNode=null;
+		}
+	 }
+	 /**
+	  * 
+	  */
+	 public void deleteFromTail(){
+		 if(firstNode==null){
+			 return;
+		 }
+		 size--;
+		 Node temp =firstNode;
+		 Node prevToTail=null;
+		 while(temp.nextNode!=null){
+			 temp=temp.nextNode;
+			 prevToTail=temp;
+		 }
+		 prevToTail.nextNode=null;
+	 }
+	 /**
+	  * 
+	  */
+	 public void printLinkedList(){
+		 if(firstNode==null){
+			 return;
+		 }
+		 Node temp =firstNode;
+		 while(temp!=null){
+			 System.out.println(temp.value);
+			 temp=temp.nextNode;
+		 }
+	 }
+	 /**
+	  * 
+	  * @return
+	  */
+	 public int size(){
+		 return size;
+	 }
 
 }

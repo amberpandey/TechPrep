@@ -1,6 +1,6 @@
 package tech.prep.ds;
 
-import tech.prep.ds.LinkedLists.LinkedList;
+import tech.prep.ds.LinkedLists.Singlelinkedlist.SingleLinkedList;
 import tech.prep.ds.LinkedLists.circularLinkedlist.CircularLinkedList;
 import tech.prep.ds.LinkedLists.doublyLinkedList.DoublyLinkedList;
 import tech.prep.ds.stack.Stack;
@@ -43,7 +43,29 @@ public class DemoClass {
 		cll.deleteFromPos(1);*/
 		
 		DoublyLinkedList dll= new DoublyLinkedList();
-		System.out.println(dll.isEmpty());
+		
+		SingleLinkedList sll= new SingleLinkedList();
+		sll.addAtBegin(1);
+		sll.addAtBegin(2);
+		sll.addAtBegin(3);
+		sll.addAtBegin(4);
+		sll.addAtBegin(5);
+		sll.addAtBegin(6);
+		sll.addAtLast(7);
+		sll.addAtLast(8);
+		sll.addAtLast(9);
+		System.out.println("sll");
+		sll.printLinkedList();
+		sll.deleteFromHead();
+		sll.deleteFromHead();
+		System.out.println("sll");
+		sll.printLinkedList();
+		sll.deleteFromTail();
+		sll.deleteFromTail();
+		System.out.println("sll");
+		sll.printLinkedList();
+		System.out.println("size  ::"+sll.size());
+/*		System.out.println(dll.isEmpty());
 		System.out.println(dll.size());
 		dll.addToTail(1);
 		dll.addToTail(2);
@@ -69,7 +91,7 @@ public class DemoClass {
 		// cll.deleteFromLast();
 		// cll.deleteFromLast();
 		System.out.println("CircularLinkedList");
-		cll.printLinkedList();
+		cll.printLinkedList();*/
 		/**
 		 * 
 		 */
