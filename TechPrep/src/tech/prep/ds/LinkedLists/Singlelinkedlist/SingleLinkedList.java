@@ -19,15 +19,15 @@ public class SingleLinkedList {
 			firstNode=new Node(val);
 			return;
 		}
-		//Assigning value to new Node nextNode pointer will be null by default as per our Node class constructor
+		//Assigning value to new Node next pointer will be null by default as per our Node class constructor
 		Node newNode=new Node(val);
 		//get temporary node as first and iterate over it till it reaches last node.
 		Node temp=firstNode;
-		while(temp.nextNode!=null){
-			temp=temp.nextNode;
+		while(temp.next!=null){
+			temp=temp.next;
 		}
 		//assign next Node Pointer of last node as new Node;
-		temp.nextNode=newNode;
+		temp.next=newNode;
 	}
 	/**
 	 * 
@@ -40,7 +40,7 @@ public class SingleLinkedList {
 			return;
 		}
 		Node temp = new Node(val);
-		temp.nextNode=firstNode;
+		temp.next=firstNode;
 		firstNode=temp;
 	}
 	/**
@@ -51,8 +51,8 @@ public class SingleLinkedList {
 			return;
 		}else{
 			size--;
-			if(firstNode.nextNode!=null){
-				firstNode=firstNode.nextNode;
+			if(firstNode.next!=null){
+				firstNode=firstNode.next;
 				return;
 			}
 			firstNode=null;
@@ -68,11 +68,11 @@ public class SingleLinkedList {
 		 size--;
 		 Node temp =firstNode;
 		 Node prevToTail=null;
-		 while(temp.nextNode!=null){
-			 temp=temp.nextNode;
+		 while(temp.next!=null){
+			 temp=temp.next;
 			 prevToTail=temp;
 		 }
-		 prevToTail.nextNode=null;
+		 prevToTail.next=null;
 	 }
 	 /**
 	  * 
@@ -84,7 +84,7 @@ public class SingleLinkedList {
 		 Node temp =firstNode;
 		 while(temp!=null){
 			 System.out.println(temp.value);
-			 temp=temp.nextNode;
+			 temp=temp.next;
 		 }
 	 }
 	 /**

@@ -18,12 +18,12 @@ public class CircularLinkedList {
 		Node temp = new Node(val);
 		if (firstNode == null) {
 			firstNode = temp;
-			firstNode.nextNode = lastNode;
+			firstNode.next = lastNode;
 			lastNode = firstNode;
 		} else {
-			lastNode.nextNode = temp;
+			lastNode.next = temp;
 			lastNode = temp;
-			lastNode.nextNode = firstNode;
+			lastNode.next = firstNode;
 		}
 		size++;
 	}
@@ -34,7 +34,7 @@ public class CircularLinkedList {
 	 */
 	public void addatHead(int val) {
 		Node temp = new Node(val);
-		temp.nextNode = firstNode;
+		temp.next = firstNode;
 		firstNode = temp;
 		size++;
 	}
@@ -49,11 +49,11 @@ public class CircularLinkedList {
 		int count = 0;
 		Node nodeAtPos = firstNode;
 		while (count != pos) {
-			nodeAtPos = nodeAtPos.nextNode;
+			nodeAtPos = nodeAtPos.next;
 			count++;
 		}
-		temp.nextNode = nodeAtPos.nextNode;
-		nodeAtPos.nextNode = temp;
+		temp.next = nodeAtPos.next;
+		nodeAtPos.next = temp;
 		size++;
 	}
 
@@ -61,8 +61,8 @@ public class CircularLinkedList {
 	 * 
 	 */
 	public void deleteFromBegin() {
-		lastNode.nextNode = firstNode.nextNode;
-		firstNode = firstNode.nextNode;
+		lastNode.next = firstNode.next;
+		firstNode = firstNode.next;
 		size--;
 	}
 
@@ -71,11 +71,11 @@ public class CircularLinkedList {
 	 */
 	public void deleteFromLast() {
 		Node secLastNode = firstNode;
-		while (secLastNode.nextNode != lastNode) {
-			secLastNode = secLastNode.nextNode;
+		while (secLastNode.next != lastNode) {
+			secLastNode = secLastNode.next;
 		}
 		lastNode = secLastNode;
-		lastNode.nextNode = firstNode;
+		lastNode.next = firstNode;
 		size--;
 	}
 
@@ -87,15 +87,15 @@ public class CircularLinkedList {
 		Node prevNode = firstNode;
 		int count =1;
 		if(pos==1){
-			lastNode.nextNode = firstNode.nextNode;
-			firstNode = firstNode.nextNode;
+			lastNode.next = firstNode.next;
+			firstNode = firstNode.next;
 			size--;	
 		}
 		while (count <pos-1) {
-			prevNode = prevNode.nextNode;
+			prevNode = prevNode.next;
 			count++;
 		}
-		prevNode.nextNode = prevNode.nextNode.nextNode;
+		prevNode.next = prevNode.next.next;
 		size--;
 	}
 
@@ -113,7 +113,7 @@ public class CircularLinkedList {
 		Node prevNode = firstNode;
 		while (prevNode != lastNode) {
 			System.out.println(prevNode.value);
-			prevNode = prevNode.nextNode;
+			prevNode = prevNode.next;
 		}
 		System.out.println(lastNode.value);
 	}

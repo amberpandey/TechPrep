@@ -13,10 +13,10 @@ public class LinkedList {
 		Node temp = new Node(value);
 		if (head ==null){
 			head=temp;
-			head.nextNode=tail;
+			head.next=tail;
 			tail=head;			
 		}else{
-			tail.nextNode=temp;
+			tail.next=temp;
 			tail=temp;
 		}
 	}
@@ -30,18 +30,18 @@ public class LinkedList {
 		Node temp = new Node(value);
 		int count =1;
 		while(count<pos-1){
-			current=current.nextNode;
+			current=current.next;
 			count++;
 		}
-		temp.nextNode=current.nextNode;
-		current.nextNode=temp;
+		temp.next=current.next;
+		current.next=temp;
 	}
 	/**
 	 * 
 	 */
 	public void insertAtBegin(int val){
 		Node temp = new Node(val);
-		temp.nextNode=head;
+		temp.next=head;
 		head=temp;
 		
 	}
@@ -57,14 +57,16 @@ public class LinkedList {
 			return 0;
 		}
 		while(count<pos){
-			if(current.nextNode==null){
+			if(current.next==null){
 				return 0;
 			}
-			current=current.nextNode;
+			current=current.next;
 			count++;
 		}
 		return current.value;
 		
 	}
+	
+	
 
 }
