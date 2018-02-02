@@ -77,11 +77,11 @@ public class SingleLinkedList {
 	 /**
 	  * 
 	  */
-	 public void printLinkedList(){
-		 if(firstNode==null){
+	 public void printLinkedList(Node frstNode){
+		 if(frstNode==null){
 			 return;
 		 }
-		 Node temp =firstNode;
+		 Node<Integer> temp =frstNode;
 		 while(temp!=null){
 			 System.out.println(temp.value);
 			 temp=temp.next;

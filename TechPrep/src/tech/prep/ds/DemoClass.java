@@ -55,15 +55,15 @@ public class DemoClass {
 		sll.addAtLast(8);
 		sll.addAtLast(9);
 		System.out.println("sll");
-		sll.printLinkedList();
+		//sll.printLinkedList();
 		sll.deleteFromHead();
 		sll.deleteFromHead();
 		System.out.println("sll");
-		sll.printLinkedList();
+		//sll.printLinkedList();
 		sll.deleteFromTail();
 		sll.deleteFromTail();
 		System.out.println("sll");
-		sll.printLinkedList();
+		//sll.printLinkedList();
 		System.out.println("size  ::"+sll.size());
 /*		System.out.println(dll.isEmpty());
 		System.out.println(dll.size());

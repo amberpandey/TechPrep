@@ -66,7 +66,21 @@ public class LinkedList {
 		return current.value;
 		
 	}
+	public Node getFirstNode(){
+return head;
+		
+	}
 	
+	 public void printLinkedList(Node frstNode){
+		 if(frstNode==null){
+			 return;
+		 }
+		 Node temp =frstNode;
+		 while(temp!=null){
+			 System.out.println(temp.value);
+			 temp=temp.next;
+		 }
+	 }
 	
 
 }
