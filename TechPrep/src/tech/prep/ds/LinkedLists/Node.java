@@ -2,10 +2,10 @@ package tech.prep.ds.LinkedLists;
 
 
 public  class Node<k>{
-	public int value;
-	public  Node next;
+	public k value;
+	public  Node<k> next;
 	
-	public Node (int val){
+	public Node (k val){
 		this.value= val;
 		next=null;
 	}

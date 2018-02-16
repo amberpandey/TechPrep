@@ -1,16 +1,16 @@
 package tech.prep.ds.LinkedLists;
 
-public class LinkedList {
-	Node head=null;
-	Node tail=null;
+public class LinkedList<k> {
+	Node<k> head=null;
+	Node<k> tail=null;
 	
 	public LinkedList(){}
 	/**
 	 * Add Node at the end of existing linked list
 	 * @param value
 	 */
-	public void addAtEnd(int value){
-		Node temp = new Node(value);
+	public void addAtEnd(k value){
+		Node<k> temp = new Node<k>(value);
 		if (head ==null){
 			head=temp;
 			head.next=tail;
@@ -25,9 +25,9 @@ public class LinkedList {
 	 * @param pos
 	 * @param value
 	 */
-	public void insertatPos(int pos,int value){
-		Node current=head;
-		Node temp = new Node(value);
+	public void insertatPos(int pos,k value){
+		Node<k> current=head;
+		Node<k> temp = new Node<k>(value);
 		int count =1;
 		while(count<pos-1){
 			current=current.next;
@@ -39,8 +39,8 @@ public class LinkedList {
 	/**
 	 * 
 	 */
-	public void insertAtBegin(int val){
-		Node temp = new Node(val);
+	public void insertAtBegin(k val){
+		Node<k> temp = new Node<k>(val);
 		temp.next=head;
 		head=temp;
 		
@@ -50,15 +50,15 @@ public class LinkedList {
 	 * @param pos
 	 * @return
 	 */
-	public int getNodeValue(int pos){
-		Node current =head;
+	public k getNodeValue(int pos){
+		Node<k> current =head;
 		int count=1;
 		if(pos<0){
-			return 0;
+			return null;
 		}
 		while(count<pos){
 			if(current.next==null){
-				return 0;
+				return null;
 			}
 			current=current.next;
 			count++;
@@ -66,16 +66,16 @@ public class LinkedList {
 		return current.value;
 		
 	}
-	public Node getFirstNode(){
+	public Node<k> getFirstNode(){
 return head;
 		
 	}
 	
-	 public void printLinkedList(Node frstNode){
+	 public void printLinkedList(Node<k> frstNode){
 		 if(frstNode==null){
 			 return;
 		 }
-		 Node temp =frstNode;
+		 Node<k> temp =frstNode;
 		 while(temp!=null){
 			 System.out.println(temp.value);
 			 temp=temp.next;
